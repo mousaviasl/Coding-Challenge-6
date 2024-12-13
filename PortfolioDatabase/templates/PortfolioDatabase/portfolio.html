@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    {% include 'PortfolioDatabase/navbar.html' %}
+    <main class="container">
+        <h1>My Portfolio</h1>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*l1paTgGxgEZHVaHSyVFhGA.png" alt="Autonomous Navigation Research" class="card-img-top thumbnail">
+                    <div class="card-body">
+                        <h5 class="card-title">Autonomous Navigation Research</h5>
+                        <p class="card-text">Researching autonomous navigation using 3D LiDAR technology to enhance system accuracy.</p>
+                        <a href="{% url 'portfolio_detail' 1 %}" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <img src="https://miro.medium.com/v2/resize:fit:828/format:webp/0*v1Rrwam7Fe-eUBpl.jpg" alt="Web Scraper" class="card-img-top thumbnail">
+                    <div class="card-body">
+                        <h5 class="card-title">Web Scraper</h5>
+                        <p class="card-text">Developed a tool for automated data extraction from websites.</p>
+                        <a href="{% url 'portfolio_detail' 2 %}" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
